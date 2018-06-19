@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul>
+    <shiro:hasPermission name="add">
+        <li>添加</li>
+    </shiro:hasPermission>
+    <shiro:hasPermission name="delete">
+        <li>删除</li>
+    </shiro:hasPermission>
+    <shiro:hasPermission name="update">
+        <li>修改</li>
+    </shiro:hasPermission>
+    <shiro:hasPermission name="query">
+        <li>查询</li>
+    </shiro:hasPermission>
+</ul>
+
+
+<span th:text="*{session.aaa}"></span>
+<p th:text="${session.user}"></p>
+<p th:text="${session.bbb}"></p>
+<p th:text="${session.list}"></p>
+
+<table>
+    <tr th:each="list,listStat:${session.list}">
+        <td th:text="${list}"></td>
+        <td th:text="${listStat.current}"></td>
+        当前迭代变量
+        <td th:text="${listStat.count}"></td>
+        当前迭代对象的index(从1开始计算)
+        <td th:text="${listStat.even}"></td>
+        布尔值，当前循环是否是奇数（从0开始计算）
+        <td th:text="${listStat.first}"></td>
+        <td th:text="${listStat.index}"></td>
+        当前迭代对象的index（从0开始计算）
+        <td th:text="${listStat.last}"></td>
+        <td th:text="${listStat.odd}"></td>
+        布尔值，当前循环是否是偶数（从0开始计算）
+        <td th:text="${listStat.size}"></td>
+        被迭代对象的大小
+        <td th:if="${listStat.even}">奇数为true</td>
+    </tr>
+    <tr th:each="list:${session.list}">
+        <td th:text="${list}"></td>
+    </tr>
+</table>
+<a href="/logOut">点我注销</a>
+<p th:if="${session.bbb=='777'}">666</p>
+<p th:unless="${session.bbb=='77'}">777</p>只有等式不成立是显示
+<p th:if="${session.bbb!='77'}">888</p>
+
+<div th:switch="${session.user.getUid()}">
+    <p th:case="'1'">User is an administrator</p>
+    <p th:case="'2'">User is a manager</p>
+</div>
+
+<p th:text="${session.user.getRoles()}"></p>
+
+<a th:href="@{https://www.baidu.com}">跳转百度</a>
+
+<div th:with="user=${session.user}">
+    <p>The name of the first person is <span th:text="${user.getUsername()}"></span></p>
+    定义局部变量
+</div>
+
+<button id="previewBtn" onclick="aaa()">预览</button>
+
+</body>
+<script>
+    function aaa() {
+        var curWwwPath = window.document.location.href;
+        var pathName = window.document.location.pathname;
+        var pos = curWwwPath.indexOf(pathName);
+        var localhostPath = curWwwPath.substring(0, pos);
+        window.open(localhostPath + "../pdf.js/web/viewer.html?file=C:/Users/Administrator/Desktop/新疆/preview?fileName=%3D合同系统需求（综合）.pdf");
+    }
+</script>
+</html>

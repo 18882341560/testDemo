@@ -1,0 +1,305 @@
+/* 124大图 */
+.dDate {
+    width: 100%;
+    height: 825px;
+    position: relative;
+    background-position: top center;
+}
+
+/* 大共享大1图 --------------------------------------------------------------*/
+.dDate1 {
+    background: url(../images/bannerk1.jpg) no-repeat;
+}
+
+.dDate1dop {
+    width: 920px;
+    height: 620px;
+    margin: 0 auto;
+}
+
+.dDate1dop p {
+    padding: 0;
+    line-height: 32px;
+    font-size: 14px;
+    color: #4b4b4b;
+    text-align: center;
+}
+
+.dDate1dop div {
+    margin: 30px;
+    display: block;
+}
+
+.dDate1dop div img {
+    display: block;
+    width: 465px;
+    height: 465px;
+    float: left;
+}
+
+.dDate1dop .carsd {
+    padding-left: 500px;
+}
+
+.dDate1dop .carsd h3 {
+    padding: 106px 0 22px;
+    font-size: 36px;
+    color: #585858;
+    font-weight: 500;
+}
+
+.dDate1dop .carsd p {
+    font-size: 14px;
+    color: #4b4b4b;
+    line-height: 22px;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+/* 大事件大2图 ---------------------------------------------------------*/
+.dDate2 {
+    background: url(../images/bannerk2.jpg) no-repeat;
+    width: 100%;
+    height: 780px;
+    position: relative;
+    background-position: top center;
+}
+
+.dDate2dop {
+    width: 1140px;
+    margin: 0 auto;
+    padding: 70px 0 60px;
+    position: relative;
+    display: block;
+}
+
+.dDate2dop ul li {
+    display: list-item;
+    margin: 35px 0;
+    border-bottom: 7px solid #fff;
+}
+
+.dDate2dop ul li:hover {
+    border-bottom: 7px solid #ccc;
+}
+
+.dDate2dop ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.te2dopl {
+    width: 570px;
+    display: inline-block;
+}
+
+.te2dopr {
+    width: 450px;
+    padding: 50px 0 0 60px;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.te2dopr span {
+    font-size: 14px;
+    color: #707070;
+}
+
+.te2dopr h4 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: #333333;
+    font-weight: 500;
+}
+
+.te2dopr p {
+    line-height: 24px;
+    color: #707070;
+    font-size: 14px;
+}
+
+/* ofo大家庭大图 ------------------------------------------------------------*/
+.dDate3 {
+    width: 100%;
+    height: 1800px;
+    padding: 140px 0 110px;
+    background: #f5f5f5;
+    position: relative;
+}
+
+.dDate3 div {
+    position: relative;
+    right: -50px;
+}
+
+.dDate3 div .dDate3img {
+    width: 970px;
+    margin-left: 170px;
+    background: #fff;
+}
+
+.dDate3imgLop {
+    position: absolute;
+    top: -450px;
+    left: 100px;
+    z-index: 3;
+}
+
+.dDate3 a {
+    display: block;
+    width: 138px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 24px;
+    text-align: right;
+    padding-right: 6px;
+    background: #626262;
+    color: #e0e0e0;
+}
+
+/* 北京 */
+.dDate3 div .cur {
+    width: 94px;
+    margin-bottom: 4px;
+    margin-left: 44px;
+    background-color: yellow;
+    color: #000;
+}
+
+.cityimg {
+    padding: 0px 200px;
+}
+
+/* 两条线 */
+.line {
+    margin: 0 40px;
+    background: #5c5c5c;
+}
+
+.line1 {
+    height: 2px;
+    margin: 0 40px;
+    background: #5c5c5c;
+
+}
+
+.line2 {
+    margin-top: 2px;
+    height: 1px;
+}
+
+.pic-show {
+    padding-top: 50px;
+}
+
+.pic-w {
+    width: 30%;
+    padding: 20px 0px;
+    float: left;
+}
+
+.pic-w h3 {
+    padding-bottom: 18px;
+    font-size: 36px;
+    color: #333333;
+    text-align: center;
+}
+
+.pic-w p {
+    line-height: 24px;
+    color: #666;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* 头疼的图片 */
+.pic-show .pic-tt img {
+    width: 80%;
+    display: block;
+    margin: 10px;
+}
+
+.pic-tt {
+    width: 30%;
+    height: 590px;
+}
+
+/* 蒙版 */
+.pic-ttp {
+    width: 80%;
+    height: 256px;
+    margin: 10px;
+    background-color: #000;
+    position: relative;
+    left: 0px;
+    top: -267px;
+    opacity: 0;
+    color: #fff;
+    text-align: center;
+    line-height: 256px;
+
+}
+
+.pic-ttp:hover {
+    opacity: 0.7;
+}
+
+/* ofo热门活动大图 ----------------------------------------------------------*/
+.dDate4 {
+    background: url(../images/bannerk4.jpg) no-repeat;
+}
+
+.dDate4dop {
+    width: 100%;
+    background-color: #f5f5f5;
+    display: block;
+}
+
+.dDate4dop ul {
+    padding-bottom: 200px;
+    width: 830px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 120px;
+}
+
+.dDate4dop ul li {
+    width: 400px;
+    height: 610px;
+    float: left;
+    transition: 0.7s;
+    background-color: #fff;
+    border-right: 7px solid #fff;
+    border-bottom: 7px solid #fff;
+}
+
+.dDate4dop ul li:hover {
+    border-right: 7px solid #ccc;
+    border-bottom: 7px solid #ccc;
+}
+
+.dDate4dop ul li img {
+    width: 400px;
+    height: 280px;
+}
+
+.dDate4dop ul li .tim {
+    font-size: 14px;
+    padding: 0px 30px;
+    color: #585858;
+}
+
+.dDate4dop ul li h2 {
+    font-size: 24px;
+    padding: 14px 30px;
+    color: #585858;
+}
+
+.dDate4dop ul li p {
+    font-size: 14px;
+    padding: 0px 30px;
+    color: #585858;
+}

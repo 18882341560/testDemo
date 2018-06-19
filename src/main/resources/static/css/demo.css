@@ -1,0 +1,234 @@
+/* 第一个页面背景轮播图 */
+.tybody1 {
+    width: 100%;
+    height: 780px;
+    position: relative;
+    background: url(../images/home_bg.jpg) no-repeat;
+    background-size: 100%;
+    background-position: top center;
+}
+
+/* 背景定位小图 */
+.t1 {
+    width: 150px;
+    height: 150px;
+    display: block;
+    background: url(../images/logo33.jpg) no-repeat;
+    background-size: 100%;
+    position: relative;
+    top: 130px;
+    left: 100px;
+}
+
+/* 四小图 */
+.thbody1 ul li {
+    width: 23%;
+    height: 210px;
+    margin: 9px;
+    display: inline-block;
+}
+
+.thbody1 h3 {
+    padding: 30px 0 0 30px;
+    font-size: 24px;
+    color: #EDEDF3;
+    font-weight: 500;
+}
+
+.thbody1 ul {
+    margin: 2px 2px;
+}
+
+.thbody1 ul li a {
+    display: block;
+    width: 108px;
+    height: 34px;
+    line-height: 34px;
+    margin: 90px 0 0 30px;
+    border: 1px solid #fff;
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.thbody1 ul li a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.homeoo1 {
+    background: url(../images/share1.jpg) 0 0 no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+}
+
+.homeoo2 {
+    background: url(../images/share2.jpg) 0 0 no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+}
+
+.homeoo3 {
+    background: url(../images/share3.jpg) 0 0 no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+}
+
+.homeoo4 {
+    background: url(../images/share4.jpg) 0 0 no-repeat;
+    background-position: center top;
+    background-size: cover;
+
+}
+
+/* 第二个页面大图 */
+.tybody2 {
+    width: 100%;
+    height: 780px;
+    position: relative;
+    background: url(../images/banner.jpg) no-repeat;
+    background-position: top center;
+}
+
+.tybody2 h3 {
+    width: 35%;
+    position: relative;
+    top: 730px;
+    margin: 0 auto;
+
+}
+
+/* 内容 */
+.twobody {
+    padding: 0 0 118px 0;
+    text-align: center;
+}
+
+.twobody div {
+    width: 710px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.twobody div h3 {
+    font-size: 36px;
+    padding: 42px 0 26px;
+    font-weight: 500;
+}
+
+.twobody div p {
+    line-height: 32px;
+    font-size: 14px;
+    color: #8d8d8d;
+    text-align: center;
+}
+
+/* 第三个页面中间大图 */
+.tybody3 {
+    width: 100%;
+    height: 880px;
+    position: relative;
+    background: url(../images/blur.jpg) no-repeat;
+    background-position: top center;
+}
+
+.phone {
+    position: absolute;
+    background: url(../images/two-code.png) no-repeat;
+    background-size: 100%;
+    width: 400px;
+    height: 750px;
+    left: 756px;
+    top: 195px;
+}
+
+.t {
+    position: absolute;
+    background: url(../images/qrcode.jpg) no-repeat;
+    width: 270px;
+    height: 438px;
+    top: 230px;
+    background-size: 100%;
+    left: 20%;
+}
+
+/* 使用方法 */
+.help {
+    margin: 10px auto;
+    height: 550px;
+}
+
+.help h3 {
+    padding: 20px 0;
+    font-weight: 500px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.help ul li h3 em {
+    font-style: normal;
+    font-size: 22px;
+    vertical-align: text-bottom;
+    line-height: 27px;
+}
+
+.help ul {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.help ul li {
+    width: 300px;
+    float: left;
+    margin-right: 60px;
+}
+
+.help ul li p {
+    line-height: 30px;
+    font-size: 14px;
+    color: #333333;
+    text-align: center;
+    opacity: 0.6;
+}
+
+/* 第四个页面大图 */
+.tybody4 {
+    width: 100%;
+    height: 780px;
+    position: relative;
+    background: url(../images/banner4.jpg) no-repeat;
+    background-position: top center;
+}
+
+/* 招聘信息 */
+.thbody4 ul {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+
+.thbody4 ul li {
+    width: 24%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.thbody4 ul li h3 {
+    font-size: 18px;
+    text-align: center;
+    color: #585858;
+    margin-bottom: 16px;
+}
+
+.thbody4 ul li a {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    color: #b8b8b8;
+    font-size: 14px;
+}

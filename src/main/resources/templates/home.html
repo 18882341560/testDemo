@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="renderer" content="webkit">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/pintuer.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/pintuer.js"></script>
+    <script src="/js/angular.min.js"></script>
+</head>
+<body ng-controller="showDate">
+<div class="panel admin-panel">
+    <div class="panel-head"><strong class="icon-reorder"> 用户列表</strong></div>
+    <div class="padding border-bottom">
+        <input class="input tips" name="where" ng-model="where" style="width:25%;display: inline-block;"/>
+        <input ng-click="request(1)" type="button" class="button border-yellow" value="查询"/>
+    </div>
+    <table class="table table-hover text-center">
+        <thead>
+        <tr>
+            <th width="5%">序号</th>
+            <th>账号</th>
+            <th>密码</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in data">
+            <td>{{$index+1}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.password}}</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="8">
+                <div class="pagelist">
+                    <a ng-click="request(1)" ng-hide="current<2">首页</a>
+                    <a ng-click="prve()" ng-hide="current<2">上一页</a>
+                    <a ng-click="prve()" ng-hide="current<2">{{current<0?0:current-1}}</a>
+                    <a class="current">{{current}}</a>
+                    <a ng-click="next()" ng-hide="current==count||current>count">{{current+1}}</a>
+                    <a ng-click="next()" ng-hide="current==count||current>count">下一页</a>
+                    <a ng-click="last()" ng-hide="current==count||current>count">尾页</a>
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+</body>
+<script>
+    (function () {
+        var app = angular.module('myApp', []);
+        app.config(function ($httpProvider) {
+            $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded';
+            $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+            $httpProvider.defaults.transformRequest = [function (data) {
+                var param = function (obj) {
+                    var query = '';
+                    var name, value, fullSubName, subName, subValue, innerObj, i;
+                    for (name in obj) {
+                        value = obj[name];
+                        if (value instanceof Array) {
+                            for (i = 0; i < value.length; ++i) {
+                                subValue = value[i];
+                                fullSubName = name + '[]';
+                                innerObj = {};
+                                innerObj[fullSubName] = subValue;
+                                query += param(innerObj) + '&';
+                            }
+                        } else if (value instanceof Object) {
+                            for (subName in value) {
+                                subValue = value[subName];
+                                fullSubName = subName;
+                                innerObj = {};
+                                innerObj[fullSubName] = subValue;
+                                query += param(innerObj) + '&';
+                            }
+                        } else if (value !== undefined && value !== null) {
+                            query += encodeURIComponent(name) + '='
+                                + encodeURIComponent(value) + '&';
+                        }
+                    }
+                    return query.length ? query.substr(0, query.length - 1) : query;
+                };
+                return angular.isObject(data) && String(data) !== '[object File]'
+                    ? param(data)
+                    : data;
+            }];
+        });
+        app.controller("showDate", function ($scope, $http) {
+
+            $scope.data;
+            $scope.current = 1;
+            $scope.count = 0;
+
+            $scope.request = function (page) {
+
+                $http({
+                    method: 'POST',
+                    data: {"current": page},
+                    url: "/aaa/eee"
+                }).success(function (data) {
+                    $scope.data = data.list;
+                    $scope.count = data.totalPage;
+                    $scope.current = data.currentPage;
+                }).error(function (data) {
+                    alert("错误");
+                })
+
+
+            }
+
+            /**
+             * 首页
+             */
+            $scope.request(1);
+            /***
+             * 下一页
+             */
+            $scope.next = function () {
+                if ($scope.count > $scope.current)
+                    $scope.current += 1;
+                $scope.request($scope.current);
+            }
+            /***
+             * 上一页
+             */
+            $scope.prve = function () {
+                if (1 < $scope.current)
+                    $scope.current -= 1;
+                $scope.request($scope.current);
+            }
+            /***
+             * 尾页
+             */
+            $scope.last = function () {
+                $scope.request($scope.count);
+            }
+
+
+        });
+    })();
+</script>
+</html>

@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    min-width: 1140px;
+    font-size: 12px;
+}
+
+.disb {
+    display: block;
+}
+
+/* 左右居中 */
+.marg {
+    margin: 0 auto;
+}
+
+/* 上边阴影 */
+.ofotop {
+    width: 100%;
+    min-width: 1100px;
+    margin: 0 auto;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    z-index: 9
+}
+
+.ofotop img {
+    width: 164px;
+    height: 78px;
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    margin-top: -40px;
+}
+
+.ofotop ul {
+    width: 500px;
+    height: 54px;
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    margin-top: -5px;
+}
+
+.ofotop ul li {
+    list-style: none;
+    padding-right: 20px;
+    float: right;
+    font-size: 20px;
+}
+
+.ofotop ul li a {
+    color: #C8CBCC;
+    text-decoration: none;
+}
+
+.ofotop ul li a:hover {
+    color: yellow;
+    transform: 0.5s;
+    text-decoration: block;
+    text-decoration-color: yellow;
+}
+
+/* 尾部 */
+.tyfooter {
+    width: 100%;
+    min-width: 1140px;
+    padding: 20px 0px;
+    background-color: #191919;
+}
+
+.tyfooter div {
+    width: 438px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    color: #a3a3a3;
+    line-height: 18px;
+}
+
+.tyfooter div p {
+    line-height: 20px;
+}
+
+.tyfooter div img {
+    margin: 20px;
+}
+
+.footdop {
+    width: 100%;
+    min-width: 1140px;
+    border-top: 1px solid #2B2B2B
+}
+
+.footdop p {
+    display: inline-block;
+    width: 750px;
+    line-height: 50px;
+    text-align: center;
+}
